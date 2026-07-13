@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+}
+
+enum BookingStatus {
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(STAFF)
+  createdAt DateTime @default(now())
+}
+
+model Room {
+  id               String    @id @default(uuid())
+  slug             String    @unique
+  name             String
+  shortDescription String
+  description      String
+  pricePerNight    Int
+  currency         String    @default("COP")
+  capacityAdults   Int
+  capacityChildren Int       @default(0)
+  beds             Int       @default(1)
+  sizeM2           Int
+  view             String    @default("")
+  amenities        String[]  @default([])
+  images           String[]  @default([])
+  video            String?
+  rating           Float     @default(0)
+  reviewsCount     Int       @default(0)
+  featured         Boolean   @default(false)
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  bookings         Booking[]
+  reviews          Review[]
+}
+
+model Booking {
+  id         String        @id @default(uuid())
+  code       String        @unique
+  roomId     String
+  room       Room          @relation(fields: [roomId], references: [id])
+  checkIn    DateTime
+  checkOut   DateTime
+  adults     Int
+  children   Int           @default(0)
+  extras     String[]      @default([])
+  subtotal   Int
+  tax        Int
+  total      Int
+  guestName  String
+  guestEmail String
+  guestPhone String
+  guestDocId String
+  notes      String?
+  status     BookingStatus @default(CONFIRMED)
+  createdAt  DateTime      @default(now())
+}
+
+model BlogPost {
+  id             String    @id @default(uuid())
+  slug           String    @unique
+  title          String
+  excerpt        String
+  content        String
+  coverImage     String?
+  author         String
+  category       String
+  tags           String[]  @default([])
+  publishedAt    DateTime  @default(now())
+  readingMinutes Int       @default(5)
+  comments       Comment[]
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  postId    String
+  post      BlogPost @relation(fields: [postId], references: [id])
+  name      String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Review {
+  id      String   @id @default(uuid())
+  roomId  String?
+  room    Room?    @relation(fields: [roomId], references: [id])
+  name    String
+  rating  Float
+  comment String
+  date    DateTime @default(now())
+  photo   String?
+}
+
+model Promotion {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  discount    String
+  code        String   @unique
+  validUntil  DateTime
+  image       String?
+  createdAt   DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}

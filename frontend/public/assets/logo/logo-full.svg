@@ -1,0 +1,52 @@
+<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="6/14 Co-Living">
+  <defs>
+    <radialGradient id="fEmblemBg" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="55%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="fGoldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdeeb0"/>
+      <stop offset="22%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="78%" stop-color="#e8c766"/>
+      <stop offset="100%" stop-color="#a97a1f"/>
+    </linearGradient>
+    <linearGradient id="fGoldHouses" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6dd8c"/>
+      <stop offset="45%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a97a1f"/>
+    </linearGradient>
+    <linearGradient id="fGoldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6dd8c"/>
+      <stop offset="30%" stop-color="#d4af37"/>
+      <stop offset="60%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#e8c766"/>
+    </linearGradient>
+    <clipPath id="fCircleClip">
+      <circle cx="80" cy="80" r="65.6"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="80" cy="80" r="75.2" fill="url(#fGoldRing)"/>
+  <circle cx="80" cy="80" r="65.6" fill="url(#fEmblemBg)"/>
+  <g clip-path="url(#fCircleClip)">
+    <circle cx="120" cy="44" r="1.6" fill="#fdeeb0" opacity="0.9"/>
+  </g>
+  <g transform="translate(-16,-16) scale(1)">
+    <g fill="none" stroke="url(#fGoldHouses)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M40 150 L70 122 L100 150" />
+      <path d="M95 150 L128 118 L161 150" />
+      <path d="M78 150 L112 108 L146 150" />
+    </g>
+    <g fill="url(#fGoldHouses)">
+      <rect x="52" y="138" width="8" height="14" rx="1"/>
+      <rect x="103" y="132" width="10" height="10" rx="1"/>
+      <rect x="119" y="132" width="10" height="10" rx="1"/>
+    </g>
+    <path d="M32 156 Q100 138 168 156" fill="none" stroke="url(#fGoldHouses)" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+
+  <text x="175" y="86" font-family="'Cormorant Garamond','Playfair Display',serif" font-size="58" font-weight="600" letter-spacing="4" fill="url(#fGoldText)">6/14</text>
+  <text x="177" y="128" font-family="'Montserrat','Helvetica Neue',sans-serif" font-size="24" font-weight="500" letter-spacing="9" fill="url(#fGoldText)">CO-LIVING</text>
+</svg>
