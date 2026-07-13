@@ -65,6 +65,42 @@ docker compose up --build
 docker compose exec backend npm run seed   # una sola vez
 ```
 
+## Despliegue en producción (Vercel + Railway)
+
+Esta es la ruta más rápida para tener el sitio en línea con un dominio público.
+
+### Backend + base de datos → Railway
+
+1. Crea una cuenta en [railway.app](https://railway.app) y un proyecto nuevo.
+2. Añade un servicio **PostgreSQL** (Railway te da un `DATABASE_URL` automáticamente).
+3. Añade un segundo servicio **"Deploy from GitHub repo"**, apuntando a este repositorio con **Root Directory = `backend`** (Railway detecta el `Dockerfile` solo).
+4. Configura las variables de entorno del servicio backend:
+   - `DATABASE_URL` → referencia la del servicio Postgres (Railway te deja enlazarla con una variable `${{Postgres.DATABASE_URL}}`)
+   - `JWT_SECRET` → genera un valor largo y aleatorio
+   - `CORS_ORIGIN` → la URL que te dé Vercel (paso siguiente), ej. `https://tu-proyecto.vercel.app`
+   - `SEED_ADMIN_PASSWORD` → contraseña del admin que quieras usar
+5. Una vez desplegado, corre las migraciones y el seed desde la terminal de Railway (o `railway run`):
+   ```bash
+   npx prisma migrate deploy
+   npm run seed
+   ```
+6. Copia la URL pública que te da Railway para el backend (ej. `https://tu-backend.up.railway.app`).
+
+### Frontend → Vercel
+
+1. Crea una cuenta en [vercel.com](https://vercel.com) e importa este repositorio.
+2. En "Configure Project", pon **Root Directory = `frontend`**.
+3. Variables de entorno del proyecto en Vercel:
+   - `NEXT_PUBLIC_API_URL` → `https://tu-backend.up.railway.app/api`
+   - `NEXT_PUBLIC_SITE_URL` → la URL que te asigne Vercel, ej. `https://tu-proyecto.vercel.app`
+4. Deploy. Vercel construye y publica automáticamente en cada `git push` a `main`.
+
+### Después del primer deploy
+
+- Vuelve a Railway y actualiza `CORS_ORIGIN` con la URL real que te dio Vercel (por si cambió), y redeploy el backend.
+- Entra a `https://tu-proyecto.vercel.app/admin/login` con el usuario creado por el seed.
+- Si quieres un dominio propio (ej. `614coliving.com`), lo añades desde el panel de Vercel (para el frontend) — es el paso donde normalmente vive el dominio público de un sitio.
+
 ## Estado actual de la integración
 
 - **Panel administrativo, reservas y formularios** (contacto, reseñas, comentarios de blog) están conectados en vivo a la API real (`NEXT_PUBLIC_API_URL`).
