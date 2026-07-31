@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Servicios",
-  description: `Descubre todos los servicios de ${HOTEL.name}: wifi, rooftop, coworking, restaurante y más.`,
+  description: `Descubre todos los servicios de ${HOTEL.name}: wifi, cocina en habitaciones seleccionadas, lavandería y más.`,
   alternates: { canonical: "/servicios" }
 };
 

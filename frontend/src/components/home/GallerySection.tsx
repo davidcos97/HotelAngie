@@ -2,14 +2,14 @@ import SectionHeading from "@/components/shared/SectionHeading";
 import Gallery from "@/components/shared/Gallery";
 
 const GALLERY_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=80", alt: "Habitación Studio Dorado", category: "Habitaciones" },
-  { src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80", alt: "Suite Skyline", category: "Habitaciones" },
-  { src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80", alt: "Piscina rooftop", category: "Rooftop" },
-  { src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80", alt: "Restaurante", category: "Restaurante" },
-  { src: "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1000&q=80", alt: "Coworking", category: "Coworking" },
-  { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80", alt: "Bar rooftop", category: "Rooftop" },
-  { src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=80", alt: "Lobby", category: "Interiores" },
-  { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80", alt: "Vista de la ciudad", category: "Rooftop" }
+  { src: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80", alt: "Habitación Lago", category: "Habitaciones" },
+  { src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80", alt: "Cocina de una habitación", category: "Cocinas" },
+  { src: "https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?auto=format&fit=crop&w=1000&q=80", alt: "Habitación Bosque", category: "Habitaciones" },
+  { src: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80", alt: "Acceso con tarjeta de seguridad", category: "Seguridad" },
+  { src: "https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1000&q=80", alt: "Zona de lavandería", category: "Lavandería" },
+  { src: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=80", alt: "Habitación Brisa", category: "Habitaciones" },
+  { src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=80", alt: "Zona común", category: "Interiores" },
+  { src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80", alt: "Parque del lago en Pereira", category: "Alrededores" }
 ];
 
 export default function GallerySection() {

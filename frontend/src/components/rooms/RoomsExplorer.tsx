@@ -7,7 +7,7 @@ import { SlidersHorizontal } from "lucide-react";
 
 export default function RoomsExplorer({ rooms }: { rooms: Room[] }) {
   const [guests, setGuests] = useState(1);
-  const [maxPrice, setMaxPrice] = useState(1000000);
+  const [maxPrice, setMaxPrice] = useState(200000);
   const [sort, setSort] = useState<"recommended" | "price-asc" | "price-desc">("recommended");
 
   const filtered = useMemo(() => {
@@ -37,9 +37,9 @@ export default function RoomsExplorer({ rooms }: { rooms: Room[] }) {
           Precio máx.
           <input
             type="range"
-            min={150000}
-            max={1000000}
-            step={25000}
+            min={100000}
+            max={200000}
+            step={5000}
             value={maxPrice}
             onChange={(e) => setMaxPrice(Number(e.target.value))}
             className="accent-gold-600"

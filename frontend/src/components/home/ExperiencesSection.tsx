@@ -4,25 +4,25 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 
 const EXPERIENCES = [
   {
-    label: "Restaurante",
-    title: "Cocina de autor con producto local",
+    label: "Ubicación",
+    title: "A pasos del Parque Bolívar y de una estación de MegaBús",
     description:
-      "Nuestro restaurante abre de 7:00 a 22:00 con una carta que celebra ingredientes colombianos, coctelería de firma y servicio a la habitación 24 horas.",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=80"
+      "Estamos en el centro de Pereira, muy cerca del Parque Bolívar y de una estación de MegaBús, para que te muevas por la ciudad sin complicaciones.",
+    image: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=80"
   },
   {
-    label: "Rooftop & piscina",
-    title: "Piscina infinita con vista a la ciudad",
+    label: "Lavandería",
+    title: "Lavandería con monedero, disponible cuando la necesites",
     description:
-      "En el último piso, nuestra piscina infinita y bar rooftop son el punto de encuentro perfecto para el atardecer, abierto hasta las 22:00.",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=80"
+      "Sin filas ni reservas: la zona de lavandería está disponible para todos los huéspedes en cualquier momento de su estadía.",
+    image: "https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1400&q=80"
   },
   {
-    label: "Eventos",
-    title: "Espacios para eventos privados y de comunidad",
+    label: "Seguridad",
+    title: "Tu tranquilidad, primero",
     description:
-      "Desde cine al aire libre hasta lanzamientos corporativos: contamos con espacios flexibles para hasta 60 personas con producción incluida.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
+      "Cada habitación tiene acceso mediante tarjeta y contamos con un sistema de cámaras privado en las zonas comunes del edificio.",
+    image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1400&q=80"
   }
 ];
 

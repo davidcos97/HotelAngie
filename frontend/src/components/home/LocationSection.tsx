@@ -1,12 +1,12 @@
-import { MapPin, Clock, Plane } from "lucide-react";
+import { Bus, MapPin, Plane } from "lucide-react";
 import { HOTEL } from "@/lib/data";
 import SectionHeading from "@/components/shared/SectionHeading";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 
 const HIGHLIGHTS = [
-  { icon: MapPin, label: "5 min", description: "al Parque Lleras" },
-  { icon: Clock, label: "10 min", description: "al Museo de Arte Moderno" },
-  { icon: Plane, label: "25 min", description: "al Aeropuerto Olaya Herrera" }
+  { icon: Bus, label: "3 min", description: "a una estación de MegaBús" },
+  { icon: MapPin, label: "5 min", description: "al Parque Bolívar" },
+  { icon: Plane, label: "20 min", description: "al Aeropuerto Internacional Matecaña" }
 ];
 
 export default function LocationSection() {
@@ -14,7 +14,7 @@ export default function LocationSection() {
     <section className="bg-charcoal-950 py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-2 lg:px-8">
         <ScrollReveal>
-          <SectionHeading light label="Ubicación" title="En el corazón de El Poblado" description={HOTEL.address} />
+          <SectionHeading light label="Ubicación" title="En el centro de Pereira, junto al Parque Bolívar" description={HOTEL.address} />
           <div className="mt-8 grid grid-cols-3 gap-4">
             {HIGHLIGHTS.map((h) => (
               <div key={h.description} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur-sm">

@@ -6,7 +6,7 @@ import { CalendarDays, Users, Search } from "lucide-react";
 
 export default function SearchWidget() {
   const router = useRouter();
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toISOString().split("T")[0]!;
   const [checkIn, setCheckIn] = useState(today);
   const [checkOut, setCheckOut] = useState("");
   const [adults, setAdults] = useState(2);

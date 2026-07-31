@@ -11,3 +11,6 @@ Thumbs.db
 
 # Claude Code local settings (machine-specific permissions cache)
 .claude/settings.local.json
+
+# Local Netlify folder
+.netlify

@@ -9,7 +9,8 @@ export default function JsonLd() {
     address: {
       "@type": "PostalAddress",
       streetAddress: HOTEL.address,
-      addressLocality: "Medellín",
+      addressLocality: "Pereira",
+      addressRegion: "Risaralda",
       addressCountry: "CO"
     },
     telephone: HOTEL.phone,

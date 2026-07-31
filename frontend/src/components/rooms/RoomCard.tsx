@@ -11,7 +11,7 @@ export default function RoomCard({ room, index = 0 }: { room: Room; index?: numb
       <Link href={`/habitaciones/${room.slug}`} className="block">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
-            src={room.images[0]}
+            src={room.images[0]!}
             alt={`${room.name} — ${room.shortDescription}`}
             fill
             sizes="(min-width: 1024px) 33vw, 100vw"

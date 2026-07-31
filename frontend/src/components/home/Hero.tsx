@@ -10,8 +10,8 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-charcoal-950">
       <Image
-        src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=2000&q=80"
-        alt="Terraza y fachada de 6/14 Co-Living al atardecer"
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=80"
+        alt="Zona del lago en Pereira, cerca de 6/14 Co-Living"
         fill
         priority
         sizes="100vw"
@@ -27,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-gold-300 backdrop-blur-sm"
         >
-          Co-living de autor · El Poblado, Medellín
+          Co-living de autor · Pereira, Risaralda
         </motion.span>
 
         <motion.h1
@@ -45,7 +45,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 max-w-xl text-balance text-base leading-relaxed text-white/75 sm:text-lg"
         >
-          Habitaciones privadas, rooftop con piscina y una comunidad global de viajeros y creadores. Diseño cálido, servicio impecable.
+          Habitaciones privadas con acceso por tarjeta, algunas con cocina propia, a pasos del Parque Bolívar y de una estación de MegaBús, en el centro de Pereira.
         </motion.p>
 
         <motion.div

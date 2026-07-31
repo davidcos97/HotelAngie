@@ -22,7 +22,7 @@ const KNOWLEDGE_BASE: { keywords: string[]; answer: string }[] = [
   },
   {
     keywords: ["ubicacion", "ubicación", "direccion", "dirección", "donde", "queda"],
-    answer: `Estamos en ${HOTEL.address}, en el corazón de El Poblado.`
+    answer: `Estamos en ${HOTEL.address}, muy cerca del Parque Bolívar y de una estación de MegaBús, en el centro de Pereira.`
   },
   {
     keywords: ["hola", "buenas", "buenos", "hey"],
@@ -31,6 +31,14 @@ const KNOWLEDGE_BASE: { keywords: string[]; answer: string }[] = [
   {
     keywords: ["gracias", "genial", "perfecto"],
     answer: "¡Con gusto! Si necesitas algo más, aquí estoy."
+  },
+  {
+    keywords: ["uber", "transporte", "taxi", "taxis", "turismo", "excursion", "excursión", "pasear"],
+    answer: "Tenemos un botón de Transporte y Turismo (junto al de WhatsApp) con información sobre Uber, taxis y recomendaciones para conocer el Eje Cafetero desde Pereira."
+  },
+  {
+    keywords: ["sugerencia", "sugerencias", "queja", "comentario", "feedback"],
+    answer: "Puedes dejarnos tu sugerencia desde el botón de Sugerencias que está flotando en la pantalla, o escribirnos directamente por WhatsApp."
   }
 ];
 

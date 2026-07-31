@@ -6,6 +6,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
+import SuggestionsButton from "@/components/shared/SuggestionsButton";
+import TransportButton from "@/components/shared/TransportButton";
 import JsonLd from "@/components/seo/JsonLd";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 
@@ -28,11 +30,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://614coliving.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${HOTEL.name} | Co-Living de autor en Medellín`,
+    default: `${HOTEL.name} | Co-Living de autor en Pereira`,
     template: `%s | ${HOTEL.name}`
   },
   description: HOTEL.description,
-  keywords: ["co-living Medellín", "hotel boutique Medellín", "habitaciones El Poblado", "nómadas digitales Medellín", "6/14 co-living"],
+  keywords: ["co-living Pereira", "alojamiento Pereira", "habitaciones con cocina Pereira", "nómadas digitales Pereira", "6/14 co-living"],
   authors: [{ name: HOTEL.name }],
   alternates: { canonical: "/" },
   openGraph: {
@@ -40,12 +42,12 @@ export const metadata: Metadata = {
     locale: "es_CO",
     url: siteUrl,
     siteName: HOTEL.name,
-    title: `${HOTEL.name} | Co-Living de autor en Medellín`,
+    title: `${HOTEL.name} | Co-Living de autor en Pereira`,
     description: HOTEL.description
   },
   twitter: {
     card: "summary_large_image",
-    title: `${HOTEL.name} | Co-Living de autor en Medellín`,
+    title: `${HOTEL.name} | Co-Living de autor en Pereira`,
     description: HOTEL.description
   },
   icons: {
@@ -81,6 +83,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <WhatsAppButton />
           <ChatbotWidget />
+          <SuggestionsButton />
+          <TransportButton />
         </CurrencyProvider>
       </body>
     </html>
