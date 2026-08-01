@@ -12,55 +12,60 @@ export type BrandAssetKey =
   | "towel"
   | "welcomeMat"
   | "deskObjects"
-  | "welcomeScreen";
+  | "welcomeScreen"
+  | "logoMark";
 
 /**
- * Fotografía real de marca 6/14 Co-Living pendiente de subir.
- * Mientras tanto se usa una imagen de referencia visualmente coherente.
- * Reemplazar `src` por el archivo definitivo (ver README de assets) sin tocar
- * los componentes que consumen este registro.
+ * Fotografía real de marca 6/14 Co-Living, recortada del material de branding
+ * oficial y optimizada a WebP. Fuente: frontend/public/assets/brand/.
  */
 export const BRAND_ASSETS: Record<BrandAssetKey, BrandAsset> = {
   lobby: {
     id: "lobby",
-    src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2000&q=80",
+    src: "/assets/brand/lobby-614-coliving.webp",
     alt: "Lobby de 6/14 Co-Living con acabados en madera clara, concreto y plantas",
     category: "Espacios"
   },
   signage: {
     id: "signage",
-    src: "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1400&q=80",
+    src: "/assets/brand/signage-614-coliving.webp",
     alt: "Señalización iluminada del logo 6/14 Co-Living sobre pared de concreto",
     category: "Marca"
   },
   glassDoor: {
     id: "glassDoor",
-    src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80",
+    src: "/assets/brand/glass-door-614-coliving.webp",
     alt: "Vinilo del logo 6/14 Co-Living en la puerta de vidrio de la sala común",
     category: "Marca"
   },
   towel: {
     id: "towel",
-    src: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=1000&q=80",
+    src: "/assets/brand/towel-614-coliving.webp",
     alt: "Toalla blanca bordada con el logo 6/14 Co-Living",
     category: "Marca"
   },
   welcomeMat: {
     id: "welcomeMat",
-    src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
+    src: "/assets/brand/welcome-mat-614-coliving.webp",
     alt: "Tapete de bienvenida con el logo 6/14 Co-Living en la entrada",
     category: "Marca"
   },
   deskObjects: {
     id: "deskObjects",
-    src: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=1400&q=80",
+    src: "/assets/brand/desk-objects-614-coliving.webp",
     alt: "Libreta y taza corporativa 6/14 Co-Living sobre un escritorio de madera",
     category: "Marca"
   },
   welcomeScreen: {
     id: "welcomeScreen",
-    src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80",
+    src: "/assets/brand/welcome-screen-614-coliving.webp",
     alt: "Pantalla digital de bienvenida con el logo 6/14 Co-Living",
+    category: "Marca"
+  },
+  logoMark: {
+    id: "logoMark",
+    src: "/assets/brand/logo-mark-614-coliving.webp",
+    alt: "Logotipo oficial de 6/14 Co-Living",
     category: "Marca"
   }
 };

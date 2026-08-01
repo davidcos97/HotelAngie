@@ -27,14 +27,14 @@ export default function BrandSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/50 via-transparent to-transparent" />
           </ScrollReveal>
 
-          <ScrollReveal delay={0.1} className="group col-span-2 flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border border-gold-500/15 bg-white shadow-soft lg:aspect-auto">
+          <ScrollReveal delay={0.1} className="group relative col-span-2 aspect-[3/2] overflow-hidden rounded-3xl border border-gold-500/15 bg-white shadow-soft lg:aspect-auto">
             <Image
-              src="/assets/logo/logo-full.svg"
-              alt="Logotipo oficial de 6/14 Co-Living"
-              width={280}
-              height={80}
+              src={BRAND_ASSETS.logoMark.src}
+              alt={BRAND_ASSETS.logoMark.alt}
+              fill
               loading="lazy"
-              className="h-auto w-3/5 max-w-[280px] transition-transform duration-500 group-hover:scale-105"
+              sizes="(min-width:1024px) 50vw, 100vw"
+              className="object-contain p-8 transition-transform duration-500 group-hover:scale-105"
             />
           </ScrollReveal>
 
