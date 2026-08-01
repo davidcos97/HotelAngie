@@ -46,7 +46,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${"6/14 Co-Living"} — inicio`}>
-          <Image src="/assets/logo/logo-emblem.svg" alt="" width={44} height={44} priority className="h-10 w-10 lg:h-11 lg:w-11" />
+          <Image src="/assets/logo/logo-icon-real.webp" alt="" width={266} height={237} priority className="h-10 w-auto lg:h-11" />
           <span className="hidden flex-col leading-none sm:flex">
             <span className="font-display text-xl font-semibold tracking-wide text-charcoal-950">6/14</span>
             <span className="text-[10px] font-medium tracking-[0.35em] text-gold-600">CO-LIVING</span>
