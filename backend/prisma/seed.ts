@@ -18,6 +18,7 @@ const ROOMS = [
     view: "Vista al parque",
     amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess", "kitchen"],
     images: [
+      "https://614-coliving.netlify.app/assets/brand/room-with-signage-614-coliving.webp",
       "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80"
     ],
