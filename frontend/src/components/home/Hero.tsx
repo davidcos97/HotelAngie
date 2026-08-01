@@ -1,22 +1,30 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import SearchWidget from "./SearchWidget";
+import { BRAND_ASSETS } from "@/lib/brandAssets";
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-charcoal-950">
-      <Image
-        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=80"
-        alt="Zona del lago en Pereira, cerca de 6/14 Co-Living"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover opacity-70"
-      />
+    <section ref={sectionRef} className="relative flex min-h-[100svh] items-center overflow-hidden bg-charcoal-950">
+      <motion.div className="absolute inset-x-0 -inset-y-[10%]" style={{ y: parallaxY }}>
+        <Image
+          src={BRAND_ASSETS.lobby.src}
+          alt={BRAND_ASSETS.lobby.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-70"
+        />
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/50 to-charcoal-950/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/70 via-transparent to-transparent" />
 

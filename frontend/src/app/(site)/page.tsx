@@ -3,6 +3,7 @@ import PromotionsSection from "@/components/home/PromotionsSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import FeaturedRooms from "@/components/home/FeaturedRooms";
 import ExperiencesSection from "@/components/home/ExperiencesSection";
+import BrandSection from "@/components/home/BrandSection";
 import GallerySection from "@/components/home/GallerySection";
 import ReviewsSection from "@/components/home/ReviewsSection";
 import LocationSection from "@/components/home/LocationSection";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <FeaturedRooms />
       <ServicesSection />
       <ExperiencesSection />
+      <BrandSection />
       <GallerySection />
       <ReviewsSection />
       <LocationSection />
