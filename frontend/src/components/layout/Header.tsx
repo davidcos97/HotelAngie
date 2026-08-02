@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X, Coins } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCurrency } from "@/context/CurrencyContext";
@@ -36,6 +36,15 @@ export default function Header() {
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [mobileOpen]);
 
   return (
     <header
@@ -80,7 +89,7 @@ export default function Header() {
             Reservar ahora
           </Link>
           <button
-            className="rounded-full p-2 text-charcoal-900 lg:hidden"
+            className="rounded-full p-2.5 text-charcoal-900 lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={mobileOpen}
@@ -90,35 +99,54 @@ export default function Header() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden glass-panel border-t border-charcoal-900/5 lg:hidden"
-          >
-            <nav className="flex flex-col gap-1 px-5 py-4" aria-label="Navegación móvil">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "rounded-lg px-3 py-2.5 text-sm font-medium text-charcoal-800 hover:bg-gold-50 hover:text-gold-700",
-                    pathname === link.href && "bg-gold-50 text-gold-700"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link href="/reservas" className="btn-gold mt-2 w-full">
-                Reservar ahora
-              </Link>
-            </nav>
-          </motion.div>
+      {/* Always mounted so an interrupted route-change never leaves an invisible
+          layer that still intercepts taps — visibility/interactivity are driven
+          directly by mobileOpen, not by an unmount animation lifecycle. */}
+      <motion.div
+        animate={{ opacity: mobileOpen ? 1 : 0 }}
+        transition={{ duration: 0.25 }}
+        className={cn(
+          "fixed inset-0 z-40 bg-charcoal-950/60 backdrop-blur-sm lg:hidden",
+          !mobileOpen && "pointer-events-none"
         )}
-      </AnimatePresence>
+        onClick={() => setMobileOpen(false)}
+        aria-hidden="true"
+      />
+
+      <motion.div
+        animate={mobileOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -12 }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        className={cn(
+          "glass-panel absolute inset-x-0 top-full z-40 max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-charcoal-900/5 lg:hidden",
+          !mobileOpen && "pointer-events-none"
+        )}
+        aria-hidden={!mobileOpen}
+      >
+        <nav className="flex flex-col gap-1 px-5 py-4" aria-label="Navegación móvil">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              tabIndex={mobileOpen ? 0 : -1}
+              className={cn(
+                "rounded-lg px-3 py-3.5 text-base font-medium text-charcoal-800 hover:bg-gold-50 hover:text-gold-700",
+                pathname === link.href && "bg-gold-50 text-gold-700"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/reservas"
+            onClick={() => setMobileOpen(false)}
+            tabIndex={mobileOpen ? 0 : -1}
+            className="btn-gold mt-2 w-full"
+          >
+            Reservar ahora
+          </Link>
+        </nav>
+      </motion.div>
     </header>
   );
 }

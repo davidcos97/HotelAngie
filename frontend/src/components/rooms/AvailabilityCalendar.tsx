@@ -39,11 +39,11 @@ export default function AvailabilityCalendar({ roomId }: { roomId: string }) {
   return (
     <div className="rounded-2xl border border-charcoal-900/5 bg-white p-5 shadow-soft">
       <div className="mb-4 flex items-center justify-between">
-        <button onClick={() => setMonth((m) => subMonths(m, 1))} aria-label="Mes anterior" className="rounded-full p-1.5 hover:bg-gold-50">
+        <button onClick={() => setMonth((m) => subMonths(m, 1))} aria-label="Mes anterior" className="flex h-11 w-11 items-center justify-center rounded-full hover:bg-gold-50">
           <ChevronLeft size={18} />
         </button>
         <p className="font-display text-lg font-semibold capitalize text-charcoal-950">{format(month, "MMMM yyyy", { locale: es })}</p>
-        <button onClick={() => setMonth((m) => addMonths(m, 1))} aria-label="Mes siguiente" className="rounded-full p-1.5 hover:bg-gold-50">
+        <button onClick={() => setMonth((m) => addMonths(m, 1))} aria-label="Mes siguiente" className="flex h-11 w-11 items-center justify-center rounded-full hover:bg-gold-50">
           <ChevronRight size={18} />
         </button>
       </div>

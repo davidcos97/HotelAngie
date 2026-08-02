@@ -74,17 +74,17 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
           >
             <button
               onClick={() => setLightboxIndex(null)}
-              className="absolute right-5 top-5 text-white/80 hover:text-gold-400"
+              className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center text-white/80 hover:text-gold-400 sm:right-5 sm:top-5"
               aria-label="Cerrar galería"
             >
-              <X size={28} />
+              <X size={26} />
             </button>
             <button
               onClick={() => setLightboxIndex((i) => (i === null ? 0 : (i - 1 + filtered.length) % filtered.length))}
-              className="absolute left-3 text-white/80 hover:text-gold-400 sm:left-8"
+              className="absolute left-1 flex h-12 w-12 items-center justify-center text-white/80 hover:text-gold-400 sm:left-6"
               aria-label="Anterior"
             >
-              <ChevronLeft size={36} />
+              <ChevronLeft size={32} />
             </button>
             <div className="relative aspect-video w-full max-w-4xl">
               <Image
@@ -97,10 +97,10 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
             </div>
             <button
               onClick={() => setLightboxIndex((i) => (i === null ? 0 : (i + 1) % filtered.length))}
-              className="absolute right-3 text-white/80 hover:text-gold-400 sm:right-8"
+              className="absolute right-1 flex h-12 w-12 items-center justify-center text-white/80 hover:text-gold-400 sm:right-6"
               aria-label="Siguiente"
             >
-              <ChevronRight size={36} />
+              <ChevronRight size={32} />
             </button>
           </motion.div>
         )}

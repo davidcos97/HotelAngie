@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Youtube, MapPin, Mail, Phone, Clock } from "lucide-react";
+import { Instagram, Facebook, MapPin, Mail, Phone, Clock } from "lucide-react";
 import { HOTEL } from "@/lib/data";
 
 const SITEMAP = [
@@ -35,9 +35,8 @@ export default function Footer() {
           <p className="text-sm leading-relaxed text-charcoal-100/70">{HOTEL.description}</p>
           <div className="mt-5 flex gap-3">
             {[
-              { icon: Instagram, href: HOTEL.social.instagram, label: "Instagram" },
               { icon: Facebook, href: HOTEL.social.facebook, label: "Facebook" },
-              { icon: Youtube, href: HOTEL.social.youtube, label: "YouTube" }
+              { icon: Instagram, href: HOTEL.social.instagram, label: "Instagram" }
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

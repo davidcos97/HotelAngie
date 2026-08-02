@@ -17,7 +17,7 @@ export default function JsonLd() {
     email: HOTEL.email,
     checkinTime: HOTEL.checkIn,
     checkoutTime: HOTEL.checkOut,
-    sameAs: [HOTEL.social.instagram, HOTEL.social.facebook, HOTEL.social.youtube],
+    sameAs: [HOTEL.social.facebook, HOTEL.social.instagram],
     priceRange: "$$"
   };
 

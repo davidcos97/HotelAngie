@@ -6,6 +6,7 @@ import ExperiencesSection from "@/components/home/ExperiencesSection";
 import BrandSection from "@/components/home/BrandSection";
 import GallerySection from "@/components/home/GallerySection";
 import ReviewsSection from "@/components/home/ReviewsSection";
+import SocialSection from "@/components/home/SocialSection";
 import LocationSection from "@/components/home/LocationSection";
 import BlogPreview from "@/components/home/BlogPreview";
 import FaqPreview from "@/components/home/FaqPreview";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <BrandSection />
       <GallerySection />
       <ReviewsSection />
+      <SocialSection />
       <LocationSection />
       <BlogPreview />
       <FaqPreview />

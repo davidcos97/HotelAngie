@@ -15,9 +15,8 @@ export const HOTEL = {
   mapEmbed: "https://www.google.com/maps?q=Carrera+6+%2313-76,+Pereira,+Risaralda,+Colombia&output=embed",
   petsAllowed: false,
   social: {
-    instagram: "https://instagram.com/614coliving",
-    facebook: "https://facebook.com/614coliving",
-    youtube: "https://youtube.com/@614coliving"
+    instagram: "https://www.instagram.com/coliving.pereira?igsh=aW4wYmRnN3E0cGc3",
+    facebook: "https://www.facebook.com/share/1VoxeeY413/?mibextid=wwXIfr"
   }
 };
 
