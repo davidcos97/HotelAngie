@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import { HOTEL } from "@/lib/data";
 import ContactForm from "@/components/shared/ContactForm";
 import SectionHeading from "@/components/shared/SectionHeading";
@@ -49,6 +49,37 @@ export default function ContactPage() {
 
             <div className="card-elevated flex items-start gap-3 p-5 text-sm text-charcoal-800">
               <MapPin size={18} className="mt-0.5 shrink-0 text-gold-600" /> {HOTEL.address}
+            </div>
+
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">Síguenos</p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <a
+                  href={HOTEL.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-elevated flex items-center gap-3 p-5 text-sm font-medium text-charcoal-800"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white">
+                    <Facebook size={18} />
+                  </span>
+                  Facebook
+                </a>
+                <a
+                  href={HOTEL.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-elevated flex items-center gap-3 p-5 text-sm font-medium text-charcoal-800"
+                >
+                  <span
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white"
+                    style={{ background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)" }}
+                  >
+                    <Instagram size={18} />
+                  </span>
+                  Instagram
+                </a>
+              </div>
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-charcoal-900/5 shadow-soft">
