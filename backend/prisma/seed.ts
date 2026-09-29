@@ -10,7 +10,7 @@ const ROOMS = [
     shortDescription: "Cocina propia y la tranquilidad de estar frente a la zona del lago.",
     description:
       "La Habitación Lago tiene cocina equipada e independiente, closet amplio y acceso a través de tarjeta de seguridad. Ideal para quienes prefieren cocinar en casa.",
-    pricePerNight: 150000,
+    pricePerNight: 120000,
     capacityAdults: 2,
     capacityChildren: 1,
     beds: 1,
@@ -29,16 +29,16 @@ const ROOMS = [
   {
     slug: "habitacion-aurora",
     name: "Habitación Aurora",
-    shortDescription: "Cocina compacta, closet y luz natural durante todo el día.",
+    shortDescription: "Compacta, con closet y luz natural durante todo el día.",
     description:
-      "Un espacio cálido y funcional con cocina propia, ideal para quienes buscan independencia total durante su estadía. Incluye closet, baño privado y puerta con acceso por tarjeta.",
-    pricePerNight: 160000,
+      "Un espacio cálido y funcional, ideal para quienes buscan independencia y tranquilidad durante su estadía. Incluye closet, baño privado y puerta con acceso por tarjeta.",
+    pricePerNight: 110000,
     capacityAdults: 2,
     capacityChildren: 0,
     beds: 1,
     sizeM2: 22,
     view: "Vista interior",
-    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess", "kitchen"],
+    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess"],
     images: ["https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80"],
     rating: 4.8,
     reviewsCount: 41,
@@ -50,7 +50,7 @@ const ROOMS = [
     shortDescription: "La más amplia, con cocina completa para hasta 3 huéspedes.",
     description:
       "Nuestra habitación con cocina más espaciosa. Perfecta para viajar en familia o con un compañero de trabajo, con dos camas, closet grande y acceso con tarjeta de seguridad.",
-    pricePerNight: 175000,
+    pricePerNight: 130000,
     capacityAdults: 3,
     capacityChildren: 1,
     beds: 2,
@@ -68,7 +68,7 @@ const ROOMS = [
     shortDescription: "Sin cocina, con acceso a la zona común y todo lo esencial.",
     description:
       "Compacta y funcional, sin cocina propia. Incluye closet, baño privado y puerta con acceso por tarjeta de seguridad.",
-    pricePerNight: 110000,
+    pricePerNight: 90000,
     capacityAdults: 2,
     capacityChildren: 0,
     beds: 1,
@@ -86,7 +86,7 @@ const ROOMS = [
     shortDescription: "La opción esencial: cómoda, segura y sin distracciones.",
     description:
       "Ideal para estadías cortas. Sin cocina propia, pero con acceso a todas las zonas comunes del edificio. Closet, baño privado y puerta con acceso por tarjeta de seguridad incluidos.",
-    pricePerNight: 115000,
+    pricePerNight: 100000,
     capacityAdults: 2,
     capacityChildren: 0,
     beds: 1,
