@@ -11,13 +11,6 @@ const EXPERIENCES = [
     image: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=80"
   },
   {
-    label: "Lavandería",
-    title: "Lavandería con monedero, disponible cuando la necesites",
-    description:
-      "Sin filas ni reservas: la zona de lavandería está disponible para todos los huéspedes en cualquier momento de su estadía.",
-    image: "https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1400&q=80"
-  },
-  {
     label: "Seguridad",
     title: "Tu tranquilidad, primero",
     description:

@@ -53,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 max-w-xl text-balance text-base leading-relaxed text-white/75 sm:text-lg"
         >
-          Habitaciones privadas con acceso por tarjeta, algunas con cocina propia, a pasos del Parque Bolívar y de una estación de MegaBús, en el centro de Pereira.
+          Habitaciones privadas con acceso por tarjeta, a pasos del Parque Bolívar y de una estación de MegaBús, en el centro de Pereira.
         </motion.p>
 
         <motion.div
@@ -69,6 +69,15 @@ export default function Hero() {
             Ver habitaciones
           </Link>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          className="mt-4 text-sm text-white/60"
+        >
+          También puedes reservar por Airbnb — encuéntranos en la plataforma como “6/14 Co-Living”.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}

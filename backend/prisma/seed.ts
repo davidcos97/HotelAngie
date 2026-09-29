@@ -67,7 +67,7 @@ const ROOMS = [
     name: "Habitación Brisa",
     shortDescription: "Sin cocina, con acceso a la zona común y todo lo esencial.",
     description:
-      "Compacta y funcional, sin cocina propia pero con acceso a la zona de lavandería. Incluye closet, baño privado y puerta con acceso por tarjeta de seguridad.",
+      "Compacta y funcional, sin cocina propia. Incluye closet, baño privado y puerta con acceso por tarjeta de seguridad.",
     pricePerNight: 110000,
     capacityAdults: 2,
     capacityChildren: 0,

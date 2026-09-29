@@ -5,7 +5,7 @@ export const HOTEL = {
   legalName: "6/14 Co-Living S.A.S.",
   tagline: "Vive, comparte, pertenece.",
   description:
-    "Un co-living de autor en Pereira: habitaciones privadas con acceso por tarjeta, cocina en algunas de ellas, a pasos del Parque Bolívar y de una estación de MegaBús. Alquiler solo por noches.",
+    "Un co-living de autor en Pereira: habitaciones privadas con acceso por tarjeta, a pasos del Parque Bolívar y de una estación de MegaBús. Alquiler solo por noches.",
   phone: "+57 300 614 6140",
   whatsapp: "573006146140",
   email: "hola@614coliving.com",
@@ -100,7 +100,7 @@ export const ROOMS: Room[] = [
     name: "Habitación Brisa",
     shortDescription: "Sin cocina, con acceso a la zona común y todo lo esencial.",
     description:
-      "Compacta y funcional, sin cocina propia pero con acceso a la zona de lavandería. Incluye closet, baño privado y puerta con acceso por tarjeta de seguridad.",
+      "Compacta y funcional, sin cocina propia. Incluye closet, baño privado y puerta con acceso por tarjeta de seguridad.",
     pricePerNight: 110000,
     currency: "COP",
     capacityAdults: 2,
@@ -146,8 +146,6 @@ export const ROOMS: Room[] = [
 
 export const SERVICES: ServiceItem[] = [
   { icon: "Wifi", title: "Wifi de alta velocidad", description: "Fibra óptica en todas las habitaciones y zonas comunes, ideal para trabajo remoto." },
-  { icon: "ChefHat", title: "Cocina en habitaciones seleccionadas", description: "3 de nuestras 5 habitaciones cuentan con cocina propia y equipada." },
-  { icon: "WashingMachine", title: "Lavandería con monedero", description: "Zona de lavandería disponible para todos los huéspedes, sin necesidad de reservarla." },
   { icon: "ShieldCheck", title: "Seguridad con cámaras y tarjeta", description: "Acceso por tarjeta en cada habitación y sistema de cámaras privado en zonas comunes." },
   { icon: "MessageCircle", title: "Atención por chat", description: "No tenemos recepción presencial 24/7, pero te atendemos por chat en todo momento." },
   { icon: "Dumbbell", title: "Gimnasios recomendados cerca", description: "Te recomendamos los mejores gimnasios a pocos minutos caminando." }
@@ -186,21 +184,19 @@ export const PROMOTIONS: Promotion[] = [
 export const REVIEWS: Review[] = [
   { id: "1", name: "Camila Restrepo", rating: 5, comment: "La cocina propia hizo toda la diferencia. Se siente como un apartamento, no como un hotel.", date: "2026-05-14", roomName: "Habitación Lago" },
   { id: "2", name: "James Whitfield", rating: 5, comment: "Perfect for remote work. Fast wifi, very quiet room, and the card access felt very secure.", date: "2026-04-02", roomName: "Habitación Brisa" },
-  { id: "3", name: "Valentina Gómez", rating: 4.5, comment: "Me encantó la zona, muy tranquila y cerca del lago. La lavandería fue súper práctica.", date: "2026-03-21", roomName: "Habitación Aurora" },
+  { id: "3", name: "Valentina Gómez", rating: 4.5, comment: "Me encantó la zona, muy tranquila y cerca del lago. Todo impecable y bien ubicado.", date: "2026-03-21", roomName: "Habitación Aurora" },
   { id: "4", name: "Marco Belline", rating: 5, comment: "Great location in Pereira, very safe with the card access system. Would book again.", date: "2026-02-11", roomName: "Habitación Bosque" },
   { id: "5", name: "Ana Sofía Duarte", rating: 4.8, comment: "La atención por chat fue rápida siempre que la necesité. Volvería sin dudarlo.", date: "2026-01-30", roomName: "Habitación Cielo" }
 ];
 
 export const FAQS: FaqItem[] = [
-  { category: "Reservas", question: "¿Cómo puedo reservar una habitación?", answer: "Puedes reservar directamente desde nuestro sitio en la sección Reservas, eligiendo fechas, huéspedes y habitación. También puedes escribirnos por WhatsApp." },
+  { category: "Reservas", question: "¿Cómo puedo reservar una habitación?", answer: "Puedes reservar directamente desde nuestro sitio en la sección Reservas, eligiendo fechas, huéspedes y habitación, escribirnos por WhatsApp, o encontrarnos en la plataforma de Airbnb." },
   { category: "Reservas", question: "¿Puedo cancelar o modificar mi reserva?", answer: "Sí, puedes cancelar sin costo hasta 48 horas antes del check-in escribiéndonos por chat o WhatsApp." },
   { category: "Check-in", question: "¿Cuál es el horario de check-in y check-out?", answer: "El check-in es a partir de las 15:00 y el check-out hasta las 12:00. Podemos gestionar horarios flexibles según disponibilidad." },
   { category: "Políticas", question: "¿Aceptan mascotas?", answer: "No, no aceptamos mascotas en ninguna habitación. Es una política que mantenemos para el bienestar de todos los huéspedes." },
   { category: "Políticas", question: "¿Hay recepción las 24 horas?", answer: "No tenemos recepción presencial 24/7. Nuestro equipo te atiende por chat en todo momento para resolver cualquier necesidad." },
   { category: "Políticas", question: "¿Qué medidas de seguridad tienen?", answer: "Todas las habitaciones tienen acceso mediante tarjeta y contamos con un sistema de cámaras privado en las zonas comunes." },
   { category: "Servicios", question: "¿El wifi tiene algún costo adicional?", answer: "No, el wifi de alta velocidad está incluido en todas las habitaciones y zonas comunes sin costo adicional." },
-  { category: "Servicios", question: "¿Todas las habitaciones tienen cocina?", answer: "Tenemos 3 habitaciones con cocina propia y equipada (Lago, Aurora y Bosque) y 2 sin cocina (Brisa y Cielo), con acceso a las zonas comunes." },
-  { category: "Servicios", question: "¿Cómo funciona la lavandería?", answer: "Contamos con una zona de lavandería con monedero, disponible para todos los huéspedes sin necesidad de reservarla." },
   { category: "Turismo", question: "¿Qué atracciones hay cerca del alojamiento?", answer: "Estamos a pocos minutos de una estación de MegaBús y del Parque Bolívar, en el centro de Pereira, y a poco más de una hora de Salento, el Valle de Cocora y los termales de Santa Rosa de Cabal." },
   { category: "Reservas", question: "¿Puedo alquilar por mes?", answer: "No, el alojamiento solo se alquila por noches. No ofrecemos tarifas mensuales." },
   { category: "Pagos", question: "¿Qué métodos de pago aceptan?", answer: "Aceptamos tarjetas de crédito/débito, transferencias y pagos en línea a través de pasarelas seguras (Wompi, PayU, Stripe)." }

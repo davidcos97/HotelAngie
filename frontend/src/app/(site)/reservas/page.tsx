@@ -17,6 +17,9 @@ export default function ReservasPage({ searchParams }: Props) {
     <div className="pb-24 pt-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <SectionHeading label="Reservas" title="Completa tu reserva" description="Disponibilidad en tiempo real y confirmación instantánea por correo." />
+        <p className="mt-4 text-sm text-charcoal-700/75">
+          También puedes reservar por Airbnb — encuéntranos en la plataforma como “6/14 Co-Living”.
+        </p>
         <div className="mt-12">
           <BookingWizard
             initialRoomSlug={searchParams.room}

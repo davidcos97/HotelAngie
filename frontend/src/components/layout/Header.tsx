@@ -55,9 +55,9 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link href="/" className="flex flex-col items-center leading-none" aria-label={`${"6/14 Co-Living"} — inicio`}>
-          <Image src="/assets/logo/logo-icon-real.webp" alt="" width={266} height={237} priority className="h-8 w-auto sm:h-9 lg:h-10" />
-          <span className="mt-0.5 font-display text-base font-semibold tracking-wide text-charcoal-950 sm:text-lg lg:text-xl">6/14</span>
-          <span className="text-[7px] font-medium tracking-[0.3em] text-gold-600 sm:text-[8px] lg:text-[9px]">CO-LIVING</span>
+          <Image src="/assets/logo/logo-icon-real.webp" alt="" width={266} height={237} priority className="h-12 w-auto sm:h-14 lg:h-16" />
+          <span className="mt-1 font-display text-2xl font-semibold tracking-wide text-charcoal-950 sm:text-3xl lg:text-4xl">6/14</span>
+          <span className="text-[10px] font-medium tracking-[0.3em] text-gold-600 sm:text-xs lg:text-sm">CO-LIVING</span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
