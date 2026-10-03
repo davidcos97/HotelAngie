@@ -29,15 +29,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950/70 via-transparent to-transparent" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start px-5 pt-28 lg:px-8">
-        <motion.span
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-gold-300 backdrop-blur-sm"
-        >
-          Co-living de autor · Pereira, Risaralda
-        </motion.span>
-
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
