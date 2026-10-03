@@ -35,7 +35,7 @@ export const ROOMS: Room[] = [
     beds: 1,
     sizeM2: 24,
     view: "Vista al parque",
-    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess", "kitchen"],
+    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "kitchen"],
     images: [
       "/assets/brand/room-with-signage-614-coliving.webp",
       "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80",
@@ -60,7 +60,7 @@ export const ROOMS: Room[] = [
     beds: 1,
     sizeM2: 22,
     view: "Vista interior",
-    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess"],
+    amenities: ["wifi", "tv", "ac", "bathroom", "closet"],
     images: [
       "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80",
@@ -84,7 +84,7 @@ export const ROOMS: Room[] = [
     beds: 2,
     sizeM2: 26,
     view: "Vista interior",
-    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess", "kitchen"],
+    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "kitchen"],
     images: [
       "https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1600&q=80",
@@ -108,7 +108,7 @@ export const ROOMS: Room[] = [
     beds: 1,
     sizeM2: 16,
     view: "Vista interior",
-    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess"],
+    amenities: ["wifi", "tv", "ac", "bathroom", "closet"],
     images: [
       "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80",
@@ -132,7 +132,7 @@ export const ROOMS: Room[] = [
     beds: 1,
     sizeM2: 17,
     view: "Vista interior",
-    amenities: ["wifi", "tv", "ac", "bathroom", "closet", "cardAccess"],
+    amenities: ["wifi", "tv", "ac", "bathroom", "closet"],
     images: [
       "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80",
